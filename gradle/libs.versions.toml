@@ -9,9 +9,9 @@ room = "2.7.0"
 hilt = "2.52"
 hiltCompose = "1.2.0"
 navigationCompose = "2.8.1"
-revenuecat = "7.16.0"
+revenuecat = "7.10.6"
 coil = "2.7.0"
-googleMobileAds = "23.0.0"
+googleMobileAds = "22.6.0"
 ksp = "2.0.10-1.0.24"
 firebase = "33.1.0"
 googlePlayServices = "21.0.0"
@@ -49,7 +49,7 @@ revenuecat-purchases = { group = "com.revenuecat.purchases", name = "purchases",
 
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
-google-mobile-ads = { group = "com.google.android.gms", name = "gms-ads", version.ref = "googleMobileAds" }
+google-mobile-ads = { group = "com.google.android.gms", name = "google-mobile-ads", version.ref = "googleMobileAds" }
 
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
