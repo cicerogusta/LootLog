@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
+    id("io.gitlab.arturbosch.detekt")
 }
 
 android {
@@ -48,6 +49,20 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+
+    lint {
+        checkReleaseBuilds = true
+        abortOnError = false
+
+        // Desabilitar warnings não relevantes
+        disable += listOf(
+            "MissingTranslation",  // Não falhar se não houver tradução completa
+            "ExtraTranslation"     // Strings extras em outros idiomas
+        )
+
+        // Avisos importantes
+        warningFile = file("lint-baseline.xml")
     }
 }
 

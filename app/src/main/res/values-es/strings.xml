@@ -17,4 +17,29 @@
     <string name="accessibility">Accesibilidad</string>
     <string name="enable_libras">Habilitar LIBRAS</string>
     <string name="disable_libras">Desactivar LIBRAS</string>
+    <!-- Auth Strings -->
+    <string name="login">Iniciar Sesión</string>
+    <string name="signup">Crear Cuenta</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="full_name">Nombre Completo</string>
+    <string name="sign_in_with_google">Iniciar Sesión con Google</string>
+    <string name="already_have_account">¿Ya tiene cuenta? Iniciar Sesión</string>
+    <string name="dont_have_account">Crear Nueva Cuenta</string>
+    <string name="logout">Cerrar Sesión</string>
+    <!-- Add Item Strings -->
+    <string name="item_name">Nombre del Artículo</string>
+    <string name="rarity">Rareza</string>
+    <string name="rarity_hint">Ej: Común, Raro, Épico, Legendario</string>
+    <string name="price_paid">Precio Pagado</string>
+    <string name="price_hint">Ej: 99.99</string>
+    <string name="image_url">URL de Imagen (Opcional)</string>
+    <string name="image_url_hint">https://...</string>
+    <!-- General Strings -->
+    <string name="delete">Eliminar</string>
+    <string name="back">Atrás</string>
+    <string name="or">o</string>
+    <string name="error">Error</string>
+    <string name="success">Éxito</string>
+    <string name="loading">Cargando...</string>
 </resources>
