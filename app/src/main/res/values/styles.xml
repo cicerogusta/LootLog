@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application style -->
+    <style name="Base.Theme.LootLog" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Material 3 colors are managed by Compose -->
+    </style>
+
+    <!-- App theme -->
+    <style name="Theme.LootLog" parent="Base.Theme.LootLog" />
+</resources>
