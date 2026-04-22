@@ -85,6 +85,12 @@ dependencies {
     // Google Mobile Ads
     implementation(libs.google.mobile.ads)
 
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.google.play.services.auth)
+
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -13,6 +13,8 @@ revenuecat = "7.13.2"
 coil = "2.7.0"
 googleMobileAds = "22.6.0"
 ksp = "2.0.10-1.0.24"
+firebase = "32.7.4"
+googlePlayServices = "20.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +44,11 @@ revenuecat-purchases = { group = "com.revenuecat.purchases", name = "purchases",
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
 google-mobile-ads = { group = "com.google.android.gms", name = "gms-ads", version.ref = "googleMobileAds" }
+
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore-ktx" }
+google-play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "googlePlayServices" }
 
 junit = { group = "junit", name = "junit", version = "4.13.2" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version = "1.1.5" }
