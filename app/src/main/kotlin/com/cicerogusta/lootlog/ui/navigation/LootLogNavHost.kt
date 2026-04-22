@@ -13,6 +13,7 @@ import com.cicerogusta.lootlog.ui.screen.auth.AuthScreen
 import com.cicerogusta.lootlog.ui.screen.auth.AuthViewModel
 import com.cicerogusta.lootlog.ui.screen.home.HomeScreen
 import com.cicerogusta.lootlog.ui.screen.paywall.PaywallScreen
+import com.cicerogusta.lootlog.ui.screen.settings.SettingsScreen
 
 @Composable
 fun LootLogNavHost(
@@ -40,6 +41,9 @@ fun LootLogNavHost(
                 },
                 onNavigateToPaywall = {
                     navController.navigate(Route.Paywall.route)
+                },
+                onNavigateToSettings = {
+                    navController.navigate(Route.Settings.route)
                 },
                 onLogout = {
                     authViewModel.signOut()
@@ -75,6 +79,14 @@ fun LootLogNavHost(
                 }
             )
         }
+
+        composable(Route.Settings.route) {
+            SettingsScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                }
+            )
+        }
     }
 }
 
@@ -83,4 +95,5 @@ sealed class Route(val route: String) {
     object Home : Route("home")
     object AddItem : Route("add_item")
     object Paywall : Route("paywall")
+    object Settings : Route("settings")
 }
