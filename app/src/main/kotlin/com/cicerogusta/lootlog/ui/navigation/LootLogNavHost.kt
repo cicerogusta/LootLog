@@ -14,6 +14,7 @@ import com.cicerogusta.lootlog.ui.screen.auth.AuthViewModel
 import com.cicerogusta.lootlog.ui.screen.home.HomeScreen
 import com.cicerogusta.lootlog.ui.screen.paywall.PaywallScreen
 import com.cicerogusta.lootlog.ui.screen.settings.SettingsScreen
+import com.cicerogusta.lootlog.ui.screen.splash.SplashScreen
 
 @Composable
 fun LootLogNavHost(
@@ -24,8 +25,18 @@ fun LootLogNavHost(
 
     NavHost(
         navController = navController,
-        startDestination = if (isLoggedIn) Route.Home.route else Route.Auth.route
+        startDestination = Route.Splash.route
     ) {
+        composable(Route.Splash.route) {
+            SplashScreen(
+                onNavigateNext = {
+                    navController.navigate(if (isLoggedIn) Route.Home.route else Route.Auth.route) {
+                        popUpTo(Route.Splash.route) { inclusive = true }
+                    }
+                }
+            )
+        }
+
         composable(Route.Auth.route) {
             AuthScreen(
                 onGoogleSignIn = { idToken ->
@@ -91,6 +102,7 @@ fun LootLogNavHost(
 }
 
 sealed class Route(val route: String) {
+    object Splash : Route("splash")
     object Auth : Route("auth")
     object Home : Route("home")
     object AddItem : Route("add_item")
