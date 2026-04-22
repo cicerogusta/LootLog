@@ -29,6 +29,7 @@ import com.cicerogusta.lootlog.ui.components.CollectibleItemCard
 
 @Composable
 fun HomeScreen(
+    onNavigateToAddItem: () -> Unit,
     onNavigateToPaywall: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
@@ -54,7 +55,11 @@ fun HomeScreen(
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    viewModel.onAddItemClicked(subscriptionState)
+                    if (subscriptionState.canAddMoreItems) {
+                        onNavigateToAddItem()
+                    } else {
+                        viewModel.onLimitReached()
+                    }
                 }
             ) {
                 Icon(Icons.Filled.Add, contentDescription = stringResource(R.string.add_item))

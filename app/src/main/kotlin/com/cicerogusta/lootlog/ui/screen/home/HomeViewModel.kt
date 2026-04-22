@@ -26,10 +26,8 @@ class HomeViewModel @Inject constructor(
     private val _navigateToPaywall = MutableStateFlow(false)
     val navigateToPaywall: StateFlow<Boolean> = _navigateToPaywall.asStateFlow()
 
-    fun onAddItemClicked(subscription: SubscriptionState) {
-        if (!subscription.canAddMoreItems) {
-            _navigateToPaywall.value = true
-        }
+    fun onLimitReached() {
+        _navigateToPaywall.value = true
     }
 
     fun resetPaywallNavigation() {
