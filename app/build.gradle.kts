@@ -60,9 +60,6 @@ android {
             "MissingTranslation",  // Não falhar se não houver tradução completa
             "ExtraTranslation"     // Strings extras em outros idiomas
         )
-
-        // Avisos importantes
-        warningFile = file("lint-baseline.xml")
     }
 }
 
