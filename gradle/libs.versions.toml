@@ -15,6 +15,9 @@ googleMobileAds = "22.6.0"
 ksp = "2.0.10-1.0.24"
 firebase = "32.7.4"
 googlePlayServices = "20.0.0"
+mockk = "1.13.12"
+coroutines = "1.8.1"
+coroutinesTest = "1.8.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -53,6 +56,9 @@ google-play-services-auth = { group = "com.google.android.gms", name = "play-ser
 junit = { group = "junit", name = "junit", version = "4.13.2" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version = "1.1.5" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version = "3.5.1" }
+
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
