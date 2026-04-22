@@ -114,7 +114,7 @@ fun AuthScreen(
                 // Error Message
                 if (authError != null) {
                     Text(
-                        text = authError ?: "",
+                        text = authError,
                         color = MaterialTheme.colorScheme.error,
                         fontSize = 14.sp,
                         modifier = Modifier.fillMaxWidth(),
@@ -138,9 +138,7 @@ fun AuthScreen(
                 ) {
                     if (isLoading) {
                         CircularProgressIndicator(
-                            modifier = Modifier
-                                .padding(end = 8.dp)
-                                .then(Modifier)
+                            modifier = Modifier.padding(end = 8.dp)
                         )
                     }
                     Text(

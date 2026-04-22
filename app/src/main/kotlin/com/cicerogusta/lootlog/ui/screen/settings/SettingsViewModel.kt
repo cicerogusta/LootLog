@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.cicerogusta.lootlog.domain.usecase.LocalizationManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 @HiltViewModel
@@ -14,7 +15,7 @@ class SettingsViewModel @Inject constructor(
     val currentLanguage: Flow<String> = localizationManager.currentLanguage
     val isLibrasEnabled: Flow<Boolean> = localizationManager.isLibrasEnabled
 
-    val availableLanguages: Flow<List<LocalizationManager.Language>> = kotlinx.coroutines.flow.flow {
+    val availableLanguages: Flow<List<LocalizationManager.Language>> = flow {
         emit(localizationManager.getAvailableLanguages())
     }
 

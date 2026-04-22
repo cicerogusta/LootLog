@@ -11,7 +11,7 @@ class PaywallViewModel @Inject constructor(
 ) : ViewModel() {
 
     fun subscribePremium() {
-        // IntegrarPizza com RevenueCat (futura implementação)
+        // Integrar com RevenueCat (futura implementação)
         subscriptionRepository.setPremium(true)
     }
 

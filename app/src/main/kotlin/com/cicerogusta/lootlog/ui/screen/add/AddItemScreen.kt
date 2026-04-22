@@ -32,6 +32,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.cicerogusta.lootlog.R
 import com.cicerogusta.lootlog.data.model.CollectibleItem
@@ -95,7 +96,7 @@ fun AddItemScreen(
                             )
                             Text(
                                 "Você tem ${15 - itemCount} item(ns) gratuito(s) restante(s)",
-                                fontSize = androidx.compose.ui.unit.sp(12f)
+                                fontSize = 12.sp
                             )
                         }
                     }
