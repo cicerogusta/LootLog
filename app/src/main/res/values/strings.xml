@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LootLog</string>
+    <string name="home_title">Minha Coleção</string>
+    <string name="add_item">Adicionar Item</string>
+    <string name="limit_reached">Limite de itens gratuitos atingido!</string>
+    <string name="upgrade_premium">Desbloquear Premium</string>
+    <string name="free_limit">Você atingiu o limite de 15 itens</string>
+    <string name="paywall_title">Desbloqueie o Premium</string>
+    <string name="paywall_subtitle">Aproveite todos os benefícios exclusivos</string>
+    <string name="no_ads">Sem Anúncios</string>
+    <string name="unlimited_items">Itens Ilimitados</string>
+    <string name="cloud_backup">Backup na Nuvem</string>
+    <string name="subscribe">Inscrever-se</string>
+    <string name="restore_purchases">Restaurar Compras</string>
+    <string name="empty_collection">Sua coleção está vazia</string>
+    <string name="start_collecting">Comece a adicionar itens</string>
+</resources>
