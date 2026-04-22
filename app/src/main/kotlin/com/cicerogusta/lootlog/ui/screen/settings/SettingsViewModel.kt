@@ -25,8 +25,4 @@ class SettingsViewModel @Inject constructor(
     fun setLibrasEnabled(enabled: Boolean) {
         localizationManager.setLibrasEnabled(enabled)
     }
-
-    fun toggleLibras() {
-        localizationManager.toggleLibras()
-    }
 }

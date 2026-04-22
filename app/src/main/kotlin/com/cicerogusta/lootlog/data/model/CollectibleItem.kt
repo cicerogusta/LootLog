@@ -2,7 +2,6 @@ package com.cicerogusta.lootlog.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.time.LocalDateTime
 
 @Entity(tableName = "collectible_items")
 data class CollectibleItem(

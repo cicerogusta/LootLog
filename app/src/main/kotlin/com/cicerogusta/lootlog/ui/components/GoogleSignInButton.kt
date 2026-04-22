@@ -11,15 +11,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import kotlinx.coroutines.launch
 
 @Composable
 fun GoogleSignInButton(
@@ -27,13 +24,10 @@ fun GoogleSignInButton(
     enabled: Boolean = true
 ) {
     val context = LocalContext.current
-    val scope = rememberCoroutineScope()
 
     TextButton(
         onClick = {
-            scope.launch {
-                signInWithGoogle(context, onClick)
-            }
+            signInWithGoogle(context, onClick)
         },
         modifier = Modifier
             .fillMaxWidth()
@@ -59,25 +53,13 @@ fun GoogleSignInButton(
     }
 }
 
-private suspend fun signInWithGoogle(
+private fun signInWithGoogle(
     context: Context,
     onIdToken: (String) -> Unit
 ) {
     try {
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("seu_web_client_id.apps.googleusercontent.com")
-            .requestEmail()
-            .build()
-
-        val googleSignInClient = GoogleSignIn.getClient(context, gso)
         val account = GoogleSignIn.getLastSignedInAccount(context)
-
-        if (account != null) {
-            account.idToken?.let { onIdToken(it) }
-        } else {
-            // Note: Para implementar login real, você precisa usar ActivityResultContracts
-            // Este é um exemplo simplificado
-        }
+        account?.idToken?.let { onIdToken(it) }
     } catch (e: Exception) {
         e.printStackTrace()
     }

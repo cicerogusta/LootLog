@@ -26,12 +26,6 @@ class LocalizationManager @Inject constructor(
         applyLanguageChange(languageCode)
     }
 
-    fun toggleLibras() {
-        val newValue = !(_isLibrasEnabled.value)
-        sharedPreferences.edit().putBoolean(KEY_LIBRAS_ENABLED, newValue).apply()
-        _isLibrasEnabled.value = newValue
-    }
-
     fun setLibrasEnabled(enabled: Boolean) {
         sharedPreferences.edit().putBoolean(KEY_LIBRAS_ENABLED, enabled).apply()
         _isLibrasEnabled.value = enabled

@@ -1,13 +1,9 @@
 package com.cicerogusta.lootlog.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -72,67 +68,5 @@ fun LibrasAccessibilityButton(
                 fontWeight = FontWeight.Bold
             )
         }
-    }
-}
-
-@Composable
-fun LibrasVideoViewer(
-    text: String,
-    isVisible: Boolean,
-    modifier: Modifier = Modifier
-) {
-    if (!isVisible) return
-
-    Card(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(200.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant
-        )
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.surfaceVariant),
-            contentAlignment = Alignment.Center
-        ) {
-            LibrasInterpreterPlaceholder(text = text)
-        }
-    }
-}
-
-@Composable
-fun LibrasInterpreterPlaceholder(text: String) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = "🤟 Interpretação em LIBRAS\n\n\"$text\"\n\n(Integrado com Hand Talk ou similar)",
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-            fontSize = 14.sp,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-    }
-}
-
-@Composable
-fun LibrasAccessibilityPanel(
-    isLibrasEnabled: Boolean,
-    onToggleLibras: (Boolean) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-    ) {
-        LibrasAccessibilityButton(
-            isLibrasEnabled = isLibrasEnabled,
-            onToggle = onToggleLibras
-        )
     }
 }
